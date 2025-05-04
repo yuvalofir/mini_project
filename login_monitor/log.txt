@@ -1,0 +1,47 @@
+[2025-05-04 18:28:24] IP: 10.100.102.11 | User: alice | Password: 1234 | Reason: Incorrect password
+[2025-05-04 18:43:26] IP: 10.100.102.11 | User: alice | Password: 1234 | Reason: Incorrect password
+[2025-05-04 18:49:52] IP: 10.100.102.11 | User: alicee | Password: 12345 | Reason: Incorrect password
+[2025-05-04 18:49:56] IP: 10.100.102.11 | User: alicee | Password: 12345 | Reason: Incorrect password
+[2025-05-04 18:49:59] IP: 10.100.102.11 | User: alicee | Password: 12345 | Reason: Incorrect password
+[2025-05-04 18:53:16] IP: 10.100.102.11 | User: alicee | Password: 12345 | Reason: Incorrect password
+[2025-05-04 18:53:41] IP: 10.100.102.11 | User: alicee | Password: 123 | Reason: Incorrect password
+[2025-05-04 18:53:42] IP: 10.100.102.11 | User: alicee | Password: 123 | Reason: Incorrect password
+[2025-05-04 18:53:43] IP: 10.100.102.11 | User: alicee | Password: 1 | Reason: Incorrect password
+[2025-05-04 19:12:41] IP: 10.100.102.11 | User: yuval | Password: 123 | Reason: Incorrect password
+[2025-05-04 19:12:42] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password
+[2025-05-04 19:12:42] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password
+[2025-05-04 19:18:57] IP: 10.100.102.11 | User: yuval | Password: 12 | Reason: Incorrect password
+[2025-05-04 19:18:58] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password
+[2025-05-04 19:18:58] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password
+[2025-05-04 19:35:28] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:35:46] IP: 10.100.102.11 | User: yuval | Password: 12 | Reason: Incorrect password – max similarity: 0.50 with password: 1234 | Risk: suspicious
+[2025-05-04 19:35:53] IP: 10.100.102.11 | User: yuval | Password: 123 | Reason: Incorrect password – max similarity: 0.75 with password: 1234 | Risk: suspicious
+[2025-05-04 19:37:05] IP: 10.100.102.11 | User: yuval | Password: yuval1234$ | Reason: Incorrect password – max similarity: 0.40 with password: 1234 | Risk: suspicious
+[2025-05-04 19:37:36] IP: 10.100.102.11 | User: yuval | Password: yuval | Reason: Incorrect password – max similarity: 0.50 with password: yuval1234$ | Risk: suspicious
+[2025-05-04 19:37:40] IP: 10.100.102.11 | User: yuval | Password: yuval123 | Reason: Incorrect password – max similarity: 0.80 with password: yuval1234$ | Risk: low risk
+[2025-05-04 19:37:47] IP: 10.100.102.11 | User: yuval | Password: yuval12 | Reason: Incorrect password – max similarity: 0.70 with password: yuval1234$ | Risk: suspicious
+[2025-05-04 19:37:52] IP: 10.100.102.11 | User: yuval | Password: yuval123 | Reason: Incorrect password – max similarity: 0.80 with password: yuval1234$ | Risk: low risk
+[2025-05-04 19:37:55] IP: 10.100.102.11 | User: yuval | Password: yuval1234 | Reason: Incorrect password – max similarity: 0.90 with password: yuval1234$ | Risk: low risk
+[2025-05-04 19:39:13] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:39:24] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:39:40] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:41:49] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:41:58] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:42:27] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:42:36] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:43:00] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:43:25] IP: 10.100.102.11 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-05-04 19:43:37] IP: 10.100.102.11 | User: yuval | Password: 12345 | Reason: Incorrect password – max similarity: 0.80 with password: 1234 | Risk: low risk
+[2025-05-04 19:49:42] IP: 10.100.102.11 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-05-04 19:49:42] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 19:49:44] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 20:06:16] IP: 10.100.102.11 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-05-04 20:06:18] IP: 10.100.102.11 | User: yuval | Password: 123 | Reason: Incorrect password – max similarity: 0.75 with password: 1234 | Risk: suspicious
+[2025-05-04 20:11:29] IP: 10.100.102.11 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-05-04 20:11:32] IP: 10.100.102.11 | User: yuval | Password: 123 | Reason: Incorrect password – max similarity: 0.75 with password: 1234 | Risk: suspicious
+[2025-05-04 20:11:41] IP: 10.100.102.11 | User: yuval | Password: yuva | Reason: Incorrect password – max similarity: 0.40 with password: yuval1234$ | Risk: suspicious
+[2025-05-04 20:34:35] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 20:34:37] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 20:34:38] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 20:37:14] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-05-04 20:37:15] IP: 10.100.102.11 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack

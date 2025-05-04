@@ -1,0 +1,25 @@
+{
+  "users": {
+    "alice": {
+      "current_password": "newpass123",
+      "old_passwords": [
+        "oldpass456"
+      ],
+      "email": "alice@example.com"
+    },
+    "alicee": {
+      "current_password": "12345",
+      "old_passwords": [
+        "1234"
+      ],
+      "email": "123"
+    },
+    "yuval": {
+      "current_password": "yuval1234$",
+      "old_passwords": [
+        "1234"
+      ],
+      "email": "yuvalofir555@gmail.com"
+    }
+  }
+}
