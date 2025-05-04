@@ -50,18 +50,8 @@ def login(users, username):
         return False
 
     user_data = users[username]
-
-    # Check if IP is authorized
     authorized_ips = load_authorized_ips()
-    if username in authorized_ips:
-        if ip not in authorized_ips[username]:
-            print("New IP detected. Login not allowed until approved.")
-            send_ip_verification_email(user_data["email"], ip, username)
-            return False
-    else:
-        # First time login from this user, save IP
-        authorized_ips[username] = [ip]
-        save_authorized_ips(authorized_ips)
+    is_new_ip = username in authorized_ips and ip not in authorized_ips[username]
 
     attempts_data = load_attempts()
     user_attempts = attempts_data.get(ip, 0)
@@ -70,9 +60,22 @@ def login(users, username):
         password = input("Password: ")
         if password == user_data["current_password"]:
             print("Login successful!")
+
+            # Reset attempt count
             if ip in attempts_data:
                 del attempts_data[ip]
                 save_attempts(attempts_data)
+
+            # Handle new IP now (after successful login)
+            if username in authorized_ips:
+                if ip not in authorized_ips[username]:
+                    print("New IP detected. Login not fully approved until confirmed.")
+                    send_ip_verification_email(user_data["email"], ip, username)
+                    return False
+            else:
+                authorized_ips[username] = [ip]
+                save_authorized_ips(authorized_ips)
+
             return True
         else:
             # Similarity check
