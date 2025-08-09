@@ -43,7 +43,7 @@ def save_authorized_ips(data):
 
 # Send real email to alert about IP being blocked
 SENDER_EMAIL = "bgusec5@gmail.com"  # Replace with your Gmail
-APP_PASSWORD = "ixux zemm zwia qxbl"     # Replace with your App Password
+APP_PASSWORD = "vxfeqesvwnfbbsic"     # Replace with your App Password
 
 def send_alert_email(recipient_email, ip):
     token = generate_unblock_token(ip, recipient_email)
