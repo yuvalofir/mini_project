@@ -66,3 +66,26 @@
 [2025-08-09 12:04:25] IP: 10.0.0.25 | User: alicee | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
 [2025-08-09 12:04:28] IP: 10.0.0.25 | User: alicee | Password: 1324 | Reason: Incorrect password – max similarity: 0.50 with password: 1234 | Risk: suspicious
 [2025-08-09 12:04:31] IP: 10.0.0.25 | User: alicee | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-08-09 12:25:33] IP: 10.0.0.25 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-08-09 12:25:34] IP: 10.0.0.25 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 12:25:35] IP: 10.0.0.25 | User: yuval | Password: 2 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 12:48:03] IP: 10.0.0.25 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-08-09 12:48:04] IP: 10.0.0.25 | User: yuval | Password: 2 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 12:48:14] IP: 10.0.0.25 | User: yuval | Password: 3 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 12:48:16] IP: 10.0.0.25 | User: yuval | Password: 6 | Reason: Incorrect password – max similarity: 0.00 with password: yuval1234$ | Risk: likely attack
+[2025-08-09 12:49:02] IP: 10.0.0.25 | User: yuval | Password: 1324 | Reason: Incorrect password – max similarity: 0.50 with password: 1234 | Risk: suspicious
+[2025-08-09 12:49:06] IP: 10.0.0.25 | User: yuval | Password: 1234 | Reason: Incorrect password – max similarity: 1.00 with password: 1234 | Risk: low risk
+[2025-08-09 12:49:09] IP: 10.0.0.25 | User: yuval | Password: 1324 | Reason: Incorrect password – max similarity: 0.50 with password: 1234 | Risk: suspicious
+[2025-08-09 12:59:45] IP: 10.0.0.25 | User: yuval | Password: 12345 | Reason: Incorrect password – max similarity: 0.80 with password: 1234 | Risk: low risk
+[2025-08-09 13:02:31] IP: 10.0.0.25 | User: yuval | Password: exit | Reason: Incorrect password – max similarity: 0.00 with password: yuval1234$ | Risk: likely attack
+[2025-08-09 13:03:03] IP: 10.0.0.25 | User: yuval | Password: 123 | Reason: Incorrect password – max similarity: 0.75 with password: 1234 | Risk: suspicious
+[2025-08-09 13:03:04] IP: 10.0.0.25 | User: yuval | Password: 23 | Reason: Incorrect password – max similarity: 0.50 with password: 1234 | Risk: suspicious
+[2025-08-09 13:03:04] IP: 10.0.0.25 | User: yuval | Password: 2 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 13:06:20] IP: 10.0.0.25 | User: yuval | Password: 123 | Reason: Incorrect password – max similarity: 0.75 with password: 1234 | Risk: suspicious
+[2025-08-09 13:06:27] IP: 10.0.0.25 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 13:25:10] IP: 10.0.0.25 | User: yuval | Password: 1 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 13:25:11] IP: 10.0.0.25 | User: yuval | Password: 2 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 13:25:12] IP: 10.0.0.25 | User: yuval | Password: 3 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 13:29:48] IP: 10.0.0.25 | User: yuval | Password: 123 | Reason: Incorrect password – max similarity: 0.75 with password: 1234 | Risk: suspicious
+[2025-08-09 13:29:50] IP: 10.0.0.25 | User: yuval | Password: 2 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack
+[2025-08-09 13:29:51] IP: 10.0.0.25 | User: yuval | Password: 3 | Reason: Incorrect password – max similarity: 0.25 with password: 1234 | Risk: likely attack

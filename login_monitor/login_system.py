@@ -4,14 +4,9 @@ from datetime import datetime
 import os
 import smtplib
 from email.message import EmailMessage
-from utils import (
-    log_failed_attempt,
-    load_blacklist, save_blacklist,
-    send_alert_email,
-)
+import sys
 from login_handler import (
-    login,
-    get_local_ip
+    login
 )
 DB_FILE = "users_db.json"
 BLACKLIST_FILE = "blacklist.json"
@@ -43,13 +38,26 @@ def change_password(users, username):
 def register(users):
     print("\n--- User Registration ---")
     while True:
-        username = input("Choose a username: ")
+        username = input("Choose a username (or type 'exit' to quit): ").strip()
+        if username.lower() == "exit":
+            print("Goodbye!")
+            sys.exit()
+
         if username in users:
             print("Username already exists. Try another one.")
         else:
             break
-    password = input("Choose a password: ")
-    email = input("Enter your email: ")
+
+    password = input("Choose a password (or type 'exit' to quit): ").strip()
+    if password.lower() == "exit":
+        print("Goodbye!")
+        sys.exit()
+
+    email = input("Enter your email (or type 'exit' to quit): ").strip()
+    if email.lower() == "exit":
+        print("Goodbye!")
+        sys.exit()
+
     users[username] = {
         "current_password": password,
         "old_passwords": [],
@@ -59,20 +67,38 @@ def register(users):
     print("User registered successfully!")
 
 if __name__ == "__main__":
-    users = load_users()
-    print("Welcome! Please choose an option:")
-    print("1. Login")
-    print("2. Register new user")
-    choice = input("Enter 1 or 2: ")
+    while True:
+        users = load_users()
+        print("Welcome! Please choose an option:")
+        print("1. Login")
+        print("2. Register new user")
+        print("Type 'exit' to quit the program.")
+        choice = input("Enter 1 or 2: ").strip()
 
-    if choice == "1":
-        username = input("Username: ")
-        if login(users, username):
-            change = input("Do you want to change your password? Type 'yes' to proceed: ")
-            if change.lower() == "yes":
-                change_password(users, username)
+        if choice.lower() == "exit":
+            print("Goodbye!")
+            sys.exit()
 
-    elif choice == "2":
-        register(users)
-    else:
-        print("Invalid choice.")
+        if choice == "1":
+            username = input("Username: ").strip()
+            if username.lower() == "exit":
+                print("Goodbye!")
+                sys.exit()
+
+            if login(users, username):
+                change = input("Do you want to change your password? Type 'yes' to proceed: ").strip()
+                if change.lower() == "exit":
+                    print("Goodbye!")
+                    sys.exit()
+
+                if change.lower() == "yes":
+                    change_password(users, username)
+            else:
+                print("Login failed. Please try again.\n")
+                continue  
+
+        elif choice == "2":
+            register(users)
+
+        else:
+            print("Invalid choice.")

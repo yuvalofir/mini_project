@@ -3,6 +3,7 @@ import socket
 import json
 import os
 from datetime import datetime
+import sys
 from utils import (
     log_failed_attempt,
     send_alert_email,
@@ -57,7 +58,11 @@ def login(users, username):
     user_attempts = attempts_data.get(ip, 0)
 
     while user_attempts < MAX_ATTEMPTS:
-        password = input("Password: ")
+        password = input("Password (or type 'exit' to quit): ").strip()
+        if password.lower() == "exit":
+            print("Goodbye!")
+            sys.exit()
+
         if password == user_data["current_password"]:
             print("Login successful!")
 
@@ -66,20 +71,15 @@ def login(users, username):
                 del attempts_data[ip]
                 save_attempts(attempts_data)
 
-            # Handle new IP now (after successful login)
-            if username in authorized_ips:
-                if ip not in authorized_ips[username]:
-                    print("New IP detected. Login not fully approved until confirmed.")
-                    send_ip_verification_email(user_data["email"], ip, username)
-                    return False
-            else:
-                authorized_ips[username] = [ip]
-                save_authorized_ips(authorized_ips)
-
             return True
+
+        elif password in user_data.get("old_passwords", []):
+            print("The password you entered matches one of your old passwords. Please use your current password.")
+            continue
+
         else:
             # Similarity check
-            pwd_candidates = [user_data["current_password"]] + user_data.get("old_passwords", [])
+            pwd_candidates = [user_data["current_password"]]
             similarities = [(p, password_similarity(password, p)) for p in pwd_candidates]
             most_similar_pwd, similarity = max(similarities, key=lambda x: x[1])
 
@@ -103,6 +103,7 @@ def login(users, username):
     if ip not in blacklist:
         blacklist.append(ip)
         save_blacklist(blacklist)
-        send_alert_email(user_data["email"], ip)
+        send_alert_email(user_data["email"], ip, username)
     print("Too many failed attempts. Your IP has been blocked.")
     return False
+
