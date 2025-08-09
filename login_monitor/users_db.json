@@ -20,6 +20,14 @@
         "1234"
       ],
       "email": "yuvalofir555@gmail.com"
+    },
+    "Roy": {
+      "current_password": "123456789",
+      "old_passwords": [
+        "56789",
+        "123456"
+      ],
+      "email": "Royhefetz@gmail.com"
     }
   }
 }

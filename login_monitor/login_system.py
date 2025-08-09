@@ -1,9 +1,5 @@
 import json
-import socket
-from datetime import datetime
 import os
-import smtplib
-from email.message import EmailMessage
 import sys
 from login_handler import (
     login

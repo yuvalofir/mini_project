@@ -2,17 +2,13 @@
 import socket
 import json
 import os
-from datetime import datetime
 import sys
 from utils import (
     log_failed_attempt,
     send_alert_email,
-    send_ip_verification_email,
     load_blacklist,
     save_blacklist,
-    password_similarity,
-    load_authorized_ips,
-    save_authorized_ips
+    password_similarity
 )
 
 MAX_ATTEMPTS = 3
@@ -51,8 +47,6 @@ def login(users, username):
         return False
 
     user_data = users[username]
-    authorized_ips = load_authorized_ips()
-    is_new_ip = username in authorized_ips and ip not in authorized_ips[username]
 
     attempts_data = load_attempts()
     user_attempts = attempts_data.get(ip, 0)

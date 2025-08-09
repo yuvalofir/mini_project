@@ -29,13 +29,6 @@ def save_blacklist(ips):
     with open(BLACKLIST_FILE, "w") as f:
         json.dump({"ips": ips}, f, indent=2)
 
-# Load authorized IPs per user
-def load_authorized_ips():
-    if not os.path.exists(AUTHORIZED_IPS_FILE):
-        return {}
-    with open(AUTHORIZED_IPS_FILE) as f:
-        return json.load(f)
-
 # Save authorized IPs per user
 def save_authorized_ips(data):
     with open(AUTHORIZED_IPS_FILE, "w") as f:
